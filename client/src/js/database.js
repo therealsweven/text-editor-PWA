@@ -42,13 +42,12 @@ export const getDb = async () => {
   const result = await request;
   console.log(result);
   // check for data else return null
-  // if (result.length > 0) {
-  console.log("result.value: ", result);
-  return result;
-  // }
-  // else {
-  //   return null;
-  // }
+  if (result.length > 0) {
+    console.log("result.value: ", result);
+    return result;
+  } else {
+    return null;
+  }
 };
 
 initdb();

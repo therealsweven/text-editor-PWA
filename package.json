@@ -1,9 +1,13 @@
 {
   "name": "JATE",
   "version": "1.0.0",
-  "description": "",
+  "engines": {
+    "node": "18.14.2"
+  },
+  "description": "Text Editor PWA",
   "main": "server.js",
   "scripts": {
+    "heroku-prebuild": "npm install --dev",
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
     "start": "cd client && npm run build && cd ../server && node server.js",
     "server": "cd server nodemon server.js --ignore client",

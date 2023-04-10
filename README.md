@@ -6,7 +6,7 @@
 
 This is a web application to be used as a basic text editor. The app may be installed as a PWA and the text editor will track inputs even when not connected to the internet.
 
-Link to deployes app: https://text-editor-pwa-roberts.herokuapp.com/
+Link to deployed app: https://text-editor-pwa-roberts.herokuapp.com/
 
 ## Table of Contents
 

@@ -8,6 +8,7 @@ const { StaleWhileRevalidate } = require("workbox-strategies");
 
 precacheAndRoute(self.__WB_MANIFEST);
 
+//set up cache
 const pageCache = new CacheFirst({
   cacheName: "page-cache",
   plugins: [
@@ -27,6 +28,7 @@ warmStrategyCache({
 
 registerRoute(({ request }) => request.mode === "navigate", pageCache);
 
+// caching assets
 registerRoute(
   ({ request }) => ["style", "script", "worker"].includes(request.destination),
   new StaleWhileRevalidate({

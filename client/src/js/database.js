@@ -40,6 +40,7 @@ export const getDb = async () => {
   // Get confirmation of the request.
   const result = await request;
   console.log(result);
+  // check for data else return null
   if (result.length > 0) {
     console.log("result.value: ", result);
     return result;

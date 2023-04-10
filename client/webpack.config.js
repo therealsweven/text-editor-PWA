@@ -19,11 +19,12 @@ module.exports = () => {
         template: "./index.html",
         title: "Contact Cards",
       }),
-
+      // custom service worker
       new InjectManifest({
         swSrc: "./src-sw.js",
         swDest: "src-sw.js",
       }),
+      // create manifest.JSON
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
@@ -43,7 +44,7 @@ module.exports = () => {
         ],
       }),
     ],
-
+    // load babel and css
     module: {
       rules: [
         {

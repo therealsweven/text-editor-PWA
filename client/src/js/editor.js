@@ -34,7 +34,7 @@ export default class {
       this.editor.setValue(localData || header);
     });
 
-    this.editor.on("change", "input", () => {
+    this.editor.on("change", () => {
       localStorage.setItem("content", this.editor.getValue());
     });
 
